@@ -10,12 +10,12 @@ class WhoToFollow extends Component {
   render() {
     const user1 = {
       'name': 'Macroseft',
-      'username': 'macroseft',
+      'handle': 'macroseft',
       'id': '0'
     };
     const user2 = {
       'name': 'Merk Zuck',
-      'username': 'zuky',
+      'handle': 'zuky',
       'id': 'e8pe'
     };
 

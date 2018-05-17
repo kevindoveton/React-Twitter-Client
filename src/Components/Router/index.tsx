@@ -16,7 +16,7 @@ class Router extends Component {
         <Switch>
           <Route exact={true} path="/" component={Newsfeed} />
           <Route path="/tweet" component={Newsfeed} />
-          <Route path="/user/:id" component={UserProfile} />
+          <Route path="/user/:handle" component={UserProfile} />
         </Switch>
 
         {/* Modals - Note might need something behind it as well */}

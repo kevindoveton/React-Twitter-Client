@@ -11,39 +11,38 @@ class UserProfile extends Component<{match: iPropMatch}> {
   state: {
     tweets: Array<iNewsfeedRes>;
     user?: iUser;
-    userId: string;
+    handle: string;
   };
 
   constructor(props: any) {
     super(props);
     this.state = {
       tweets: [],
-      userId: String(this.props.match.params.id)
+      handle: String(this.props.match.params.handle)
     };
   }
 
   componentWillMount() {
-    fetch(process.env.REACT_APP_API + '/user/' + this.state.userId)
+    fetch(process.env.REACT_APP_API + '/user/' + this.state.handle)
     .then(r => r.json())
     .then(r => {
-      this.setState({
-        user: r
-      });
+      console.log(r);
+      this.setState(r);
     })
     .catch((e) => {
-      console.error('newsfeed: ' + e);
+      console.error('user: ' + e);
     });
 
-    fetch(process.env.REACT_APP_API + '/user/' + this.state.userId + '/feed/')
-    .then(r => r.json())
-    .then(r => {
-      this.setState({
-        tweets: r
-      });
-    })
-    .catch((e) => {
-      console.error('newsfeed: ' + e);
-    });
+    // fetch(process.env.REACT_APP_API + '/user/' + this.state.userId + '/feed/')
+    // .then(r => r.json())
+    // .then(r => {
+    //   this.setState({
+    //     tweets: r
+    //   });
+    // })
+    // .catch((e) => {
+    //   console.error('newsfeed: ' + e);
+    // });
   }
 
   // componentDidMount() {

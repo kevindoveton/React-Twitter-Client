@@ -7,7 +7,7 @@ class UserIcon extends Component<{size?: number, userId?: string}> {
   constructor(props: any) {
     super(props);
     if (typeof props.userId === 'string') {
-      this.styles.backgroundImage = 'url(\'' + process.env.REACT_APP_API + '/user/img/' + props.userId + '\')';
+      this.styles.backgroundImage = 'url(\'' + process.env.REACT_APP_API + '/user/' + props.userId + '/img/\')';
     } else {
       this.styles.backgroundImage = 'url(\'https://placehold.it/100x100/333333\')';
     }

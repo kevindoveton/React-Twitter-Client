@@ -9,7 +9,6 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: row;
-  // margin: 1em;
   background: #ffffff;
 
   .tweet-left-column,
@@ -44,5 +43,11 @@
   .tweet-username,
   .tweet-date { 
     color: $gray;
+  }
+
+  .tweet-name {
+    &:hover  {
+      color: $blue;
+    }
   }
 }

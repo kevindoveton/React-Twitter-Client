@@ -32,10 +32,10 @@ class Tweet extends Component<iTweetProps, {key: string}> {
         </div>
         <div className="tweet-right-column">
           <div className="tweet-header">
-            <Link to={'/user/' + this.props.user.id}>
+            <Link to={'/user/' + this.props.user.handle}>
               <span className="tweet-name">{this.props.user.name}</span>
             </Link>
-            <span className="tweet-username">@{this.props.user.username}</span>
+            <span className="tweet-username">@{this.props.user.handle}</span>
             <span className="tweet-date">{this.formatTime(this.props.tweet.dateTime)}</span>
           </div>
           <div className="tweet-body">

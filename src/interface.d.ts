@@ -1,16 +1,30 @@
-interface iUser {
+interface iUserSimple {
   name: string,
-  username: string,
+  handle: string,
+  id: string
+}
+
+interface iUser extends iUserSimple {
+  followerCount?: number,
+  followingCount?: number,
+  tweetCount?: number,
+  tweets?: Array<iTweet>,
+  followers?: Array<iUserSimple>,
+  following?: Array<iUserSimple>
+}
+
+interface iTweet {
+  dateTime: string,
   id: string,
-  followers?: number,
-  following?: number,
-  tweets?: number
+  text: string,
+  user: iUserSimple
 }
 
 interface iNewsfeedRes {
   dateTime: string,
   text: string,
-  id: number,
+  id?: number,
+  handle?: string,
   user: iUser
 }
 
@@ -28,6 +42,7 @@ interface iPropMatch {
   isExact: boolean,
   url: string,
   params: {
-    id?: number
+    id?: number,
+    handle?: string
   }
 }

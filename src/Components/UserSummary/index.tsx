@@ -22,22 +22,22 @@ class UserSummary extends Component<{user: iUser}> {
             <Link to={'/user/' + this.props.user.id}>
               <h2 className="name">{this.props.user.name}</h2>
             </Link>
-            <span className="handle">@{this.props.user.username}</span>
+            <span className="handle">@{this.props.user.handle}</span>
             </div>
           </div>
 
           <div className="stats">
             <div className="tweets stat">
               <h4>Tweets</h4>
-              <h5>{this.props.user.tweets}</h5>
+              <h5>{this.props.user.tweetCount}</h5>
             </div>
             <div className="following stat">
               <h4>Following</h4>
-              <h5>{this.props.user.following}</h5>
+              <h5>{this.props.user.followingCount}</h5>
             </div>
             <div className="followers stat">
               <h4>Followers</h4>
-              <h5>{this.props.user.followers}</h5>
+              <h5>{this.props.user.followerCount}</h5>
             </div>
           </div>
         </div>

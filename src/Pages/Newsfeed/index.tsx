@@ -28,6 +28,7 @@ class Newsfeed extends Component {
     fetch(process.env.REACT_APP_API + '/newsfeed/')
     .then(r => r.json())
     .then(r => {
+      console.log(r);
       this.setState({
         tweets: r.tweets,
         user: r.user
