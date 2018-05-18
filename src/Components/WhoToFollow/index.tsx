@@ -22,7 +22,7 @@ class WhoToFollow extends Component {
     const users = [user1, user2];
 
     return (
-      <div className="who-to-follow">
+      <div className="who-to-follow box">
         <div className="who-to-follow--header">
           <h2 className="header--title">Who To Follow</h2>
           <span className="header--link">Refresh</span>

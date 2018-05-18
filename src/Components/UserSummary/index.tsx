@@ -13,7 +13,7 @@ class UserSummary extends Component<{user: iUser}> {
 
   render() {
     return (
-      <div className="user-summary">
+      <div className="user-summary box">
         <span className="header" />
         <div className="content">
           <div className="content-header">

@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.login-page {
+  &, .login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;        
+  }
+
+  width: 100%;
+  height: 100%;
+  background: $blue;
+
+  h1 {
+    color: $white;
+    font-size: 56px;
+    margin-bottom: 24px;
+  }
+
+  .login-form {
+    width: 100%;
+    input {
+      margin: 8px;
+      width: 90%;
+      max-width: 500px;
+      // color: darken($gray, 25);
+      color: #333;
+    }
+
+    .btn.btn--outline {
+      background: $white;
+      padding: 8px 48px;
+    }
+  }
+}

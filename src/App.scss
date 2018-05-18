@@ -25,15 +25,21 @@ a {
 .container {
   display: flex;
   justify-content: center;
+  width: 90%;
+  max-width: 1190px;
+  margin: 0 auto;
 
   .container--c {
     width: 50%;
     margin: 0 16px;
+    max-width: 564px;
   }
 
   .container--lhs,
   .container--rhs {
-    width: 25%;
+    width:
+    %;
+    max-width: 290px;
   }
 
   .container--c,

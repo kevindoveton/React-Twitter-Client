@@ -12,28 +12,30 @@ class Header extends Component {
 
   render() {
     return (
-      <header className="twityer-header container">
-        <div className="header-lhs">
-          <Link to="/">
-            <span>Home</span>
-          </Link>
-          <Link to="/">
-            <span>Moments</span>
-          </Link>
-          <Link to="/">
-            <span>Notifications</span>
-          </Link>
-          <Link to="/">
-            <span>Messages</span>
-          </Link>
-        </div>
-        <div className="header-c">
-          <span>Logo</span>
-        </div>
-        <div className="header-rhs">
-          <input className="header--search" type="text" />
-          <UserIcon size={30} />
-          <button className="btn btn--primary">Tweet</button>
+      <header className="twityer-header">
+        <div className="container">
+          <div className="header-lhs">
+            <Link to="/">
+              <span>Home</span>
+            </Link>
+            <Link to="/">
+              <span>Moments</span>
+            </Link>
+            <Link to="/">
+              <span>Notifications</span>
+            </Link>
+            <Link to="/">
+              <span>Messages</span>
+            </Link>
+          </div>
+          <div className="header-c">
+            <span>Logo</span>
+          </div>
+          <div className="header-rhs">
+            <input className="header--search" type="text" />
+            <UserIcon size={30} />
+            <button className="btn btn--primary">Tweet</button>
+          </div>
         </div>
       </header>
     );

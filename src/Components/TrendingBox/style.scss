@@ -1,0 +1,24 @@
+@import '../../variables';
+
+.trending-box.box {
+  .trending-box--header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      color: $blue;
+      margin-left: auto;
+    }
+  }
+
+  .trending-box--content {
+    h5 {
+      font-size: 14px;
+    }
+
+    .trend {
+      margin-top: 4px;
+    }
+  }
+}

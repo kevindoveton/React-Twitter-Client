@@ -46,3 +46,9 @@ interface iPropMatch {
     handle?: string
   }
 }
+
+interface iTrend {
+  heading: string,
+  subHeading: string,
+  hashtag: boolean
+}

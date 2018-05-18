@@ -7,6 +7,14 @@ body {
   font-size: 14px;
 }
 
+html,
+body,
+#root,
+.router {
+  width: 100%;
+  height: 100%;
+}
+
 input {
   padding: 8px;
   border: 1px solid $bg-grey;
@@ -27,7 +35,7 @@ h2 {
 }
 
 h3 {
-  
+
 }
 
 h4 {
@@ -41,19 +49,17 @@ h5 {
 }
 
 h6 {
-
+  font-size: 12px;
+  color: #657786;
 }
 
-.container {
-  padding: 0 5%;
-}
 
 .btn {
   border-radius: 21px;
   border: 0;
   padding: 8px 16px;
   cursor: pointer;
-  
+
   &:hover {
   }
 
@@ -61,9 +67,33 @@ h6 {
     background: $blue--lighter;
     color: $white;
   }
-  
+
   &.btn--outline {
     border: 1px solid $blue--lighter;
     color: $blue--lighter;
+    background: transparent;
+    transition: .25s all;
+
+    &:hover {
+      background: $bg-grey;
+    }
   }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  @extend .flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  background: $white;
+  width: 100%;
+  height: 100%;
+  padding: .5em;
+  margin-bottom: 16px;
 }

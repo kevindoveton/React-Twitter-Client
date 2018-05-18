@@ -1,7 +1,7 @@
 @import '../../variables';
 
-.user-summary {
-  background: $white;
+.user-summary.box {
+  padding: 0;
 
   .header {
     display: block;

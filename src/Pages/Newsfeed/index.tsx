@@ -8,6 +8,7 @@ import { WhoToFollow } from '../../Components/WhoToFollow';
 import { TwitterDetails } from '../../Components/TwitterDetails';
 import { Header } from '../../Components/Header';
 import { NewTweet } from '../../Components/NewTweet';
+import { TrendingBox } from '../../Components/TrendingBox';
 
 import './style.scss';
 
@@ -15,6 +16,7 @@ class Newsfeed extends Component {
   state: {
     tweets: Array<iNewsfeedRes>;
     user?: iUser;
+    trends?: Array<iTrend>;
   };
 
   constructor(props: any) {
@@ -37,6 +39,17 @@ class Newsfeed extends Component {
     .catch((e) => {
       console.error('newsfeed: ' + e);
     });
+    fetch(process.env.REACT_APP_API + '/newsfeed/trending/')
+    .then(r => r.json())
+    .then(r => {
+      console.log(r);
+      this.setState({
+        trends: r
+      });
+    })
+    .catch((e) => {
+      console.error('newsfeed: ' + e);
+    });
   }
 
   componentDidMount() {
@@ -50,6 +63,7 @@ class Newsfeed extends Component {
         <div className="container--lhs">
           <div className="newsfeed--summary">
             {typeof this.state.user !== 'undefined' && (<UserSummary user={this.state.user} />)}
+            {this.state.trends && <TrendingBox trends={this.state.trends} />}
           </div>
         </div>
         <div className="container--c">
